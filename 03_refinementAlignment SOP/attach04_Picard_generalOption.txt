@@ -1,0 +1,11 @@
+--help									Displays options specific to this tool.
+--stdhelp								Displays options specific to this tool AND options common to all Picard command line tools.
+--version								Displays program version.
+TMP_DIR=File								This option may be specified 0 or more times.
+VERBOSITY=LogLevel						Control verbosity of logging. Default value: INFO. This option can be set to 'null' to clear the default value. Possible values: {ERROR, WARNING, INFO, DEBUG}
+QUIET=Boolean							Whether to suppress job-summary info on System.err. Default value: false. This option can be set to 'null' to clear the default value. Possible values: {true, false}
+VALIDATION_STRINGENCY=ValidationStringency	Validation stringency for all SAM files read by this program. Setting stringency to SILENT can improve performance when processing a BAM file in which variable-length data (read, qualities, tags) do not otherwise need to be decoded. Default value: STRICT. This option can be set to 'null' to clear the default value. Possible values: {STRICT, LENIENT, SILENT}
+COMPRESSION_LEVEL=Integer				   	Compression level for all compressed files created (e.g. BAM and GELI). Default value: 5. This option can be set to 'null' to clear the default value.
+MAX_RECORDS_IN_RAM=Integer				When writing SAM files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk. Increasing this number reduces the number of file handles needed to sort a SAM file, and increases the amount of RAM needed. Default value: 500000. This option can be set to 'null' to clear the default value.
+CREATE_INDEX=Boolean					     	Whether to create a BAM index when writing a coordinate-sorted BAM file. Default value: false. This option can be set to 'null' to clear the default value. Possible values: {true, false}
+CREATE_MD5_FILE=Boolean					Whether to create an MD5 digest for any BAM files created. Default value: false. This option can be set to 'null' to clear the default value. Possible values: {true, false}

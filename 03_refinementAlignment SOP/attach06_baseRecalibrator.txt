@@ -1,0 +1,15 @@
+ -o,--out <out>												An output file created by the walker.  Will overwrite contents if file exists
+ -knownSites,--knownSites <knownSites>                                    		A database of known polymorphic sites to skip over in the recalibration algorithm
+ -ls,--list                                                               	  	      	    		      	List the available covariates and exit
+ -cov,--covariate <covariate>                                             				One or more covariates to be used in the recalibration. Can be specified multiple times
+ -noStandard,--no_standard_covs                                           			Do not use the standard set of covariates, but rather just the ones listed using the -cov argument
+ -sMode,--solid_recal_mode <solid_recal_mode>                            		How should we recalibrate solid bases in which the reference was inserted? Options = DO_NOTHING, SET_Q_ZERO, SET_Q_ZERO_BASE_N, or REMOVE_REF_BIAS (DO_NOTHING|SET_Q_ZERO|SET_Q_ZERO_BASE_N|REMOVE_REF_BIAS)
+ -solid_nocall_strategy,--solid_nocall_strategy <solid_nocall_strategy>   	Defines the behavior of the recalibrator when it encounters no calls in the color space. Options = THROW_EXCEPTION, LEAVE_READ_UNRECALIBRATED, or PURGE_READ (THROW_EXCEPTION|LEAVE_READ_UNRECALIBRATED|PURGE_READ)
+ -mcs,--mismatches_context_size <mismatches_context_size>                   size of the k-mer context to be used for base mismatches
+ -ics,--indels_context_size <indels_context_size>                           	    	size of the k-mer context to be used for base insertions and deletions
+ -mdq,--mismatches_default_quality <mismatches_default_quality>           default quality for the base mismatches covariate
+ -idq,--insertions_default_quality <insertions_default_quality>           	  	default quality for the base insertions covariate
+ -ddq,--deletions_default_quality <deletions_default_quality>             	default quality for the base deletions covariate
+ -lqt,--low_quality_tail <low_quality_tail>                               			minimum quality for the bases in the tail of the reads to be considered
+ -ql,--quantizing_levels <quantizing_levels>                              			number of distinct quality scores in the quantized output
+ -bintag,--binary_tag_name <binary_tag_name>                              		the binary tag covariate name if using it

@@ -1,0 +1,12 @@
+ -o,--out <out>									Write output to this BAM filename instead of STDOUT
+ -compress,--bam_compression <bam_compression>     	Compression level to use for writing BAM files
+ --disable_bam_indexing                            		    	     	Turn off on-the-fly creation of indices for output BAM files.
+ --generate_md5                                    				     	Enable on-the-fly creation of md5s for output BAM files.
+ -simplifyBAM,--simplifyBAM                        				If provided, output BAM files will be simplified to include just key reads for downstream variation discovery analyses (removing duplicates, PF-, non-primary reads), as well stripping all extended tags from the kept reads except the read group identifier
+ -readGroup,--readGroup <readGroup>                			Exclude all reads with this read group from the output
+ -platform,--platform <platform>                   			Exclude all reads with this platform from the output
+ -n,--number <number>                              				Print the first n reads from the file, discarding the rest
+ -ds,--downsample_coverage <downsample_coverage>   	Downsample BAM to desired coverage
+ -sf,--sample_file <sample_file>                   		        File containing a list of samples (one per line). Can be specified multiple times
+ -sn,--sample_name <sample_name>                   		Sample name to be included in the analysis. Can be specified multiple times.
+ -s,--simplify                                     		       	       	  	Simplify all reads.

@@ -1,0 +1,3 @@
+INPUT=File					The input file to fix. This option may be specified 0 or more times.
+OUTPUT=File			    	    	The output file to write to. If no output file is supplied, the input file is overwritten. Default value: null.
+SORT_ORDER=SortOrder			Optional sort order if the OUTPUT file should be sorted differently than the INPUT file. Default value: null. Possible values: {unsorted, queryname, coordinate}

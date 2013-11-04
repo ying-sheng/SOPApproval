@@ -1,0 +1,8 @@
+ -input,--input <input>							The raw input variants to be recalibrated
+ -recalFile,--recal_file <recal_file>                   		The input recal file used by ApplyRecalibration
+ -tranchesFile,--tranches_file <tranches_file>         	The input tranches file describing where to cut the data
+ -o,--out <out>                                             	  	The output filtered and recalibrated VCF file in which each variant is annotated with its VQSLOD value
+ -ts_filter_level,--ts_filter_level <ts_filter_level>   	The truth sensitivity level at which to start filtering
+ -ignoreFilter,--ignore_filter <ignore_filter>          	If specified the variant recalibrator will use variants even if the specified filter name is marked in the input VCF file
+ -mode,--mode <mode>                                    	   	Recalibration mode to employ: 1.) SNP for recalibrating only SNPs (emitting indels untouched in the output VCF); 2.) INDEL for indels; and 3.) BOTH for recalibrating both SNPs and indels simultaneously. (SNP|INDEL|BOTH)
+

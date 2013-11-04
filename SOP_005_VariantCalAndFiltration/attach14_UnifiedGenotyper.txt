@@ -1,0 +1,30 @@
+-glm,--genotype_likelihoods_model <genotype_likelihoods_model>							Genotype likelihoods calculation model to employ -- SNP is the default option, while INDEL is also available for calling indels and BOTH is available for calling both together (SNP|INDEL|GeneralPloidySNP|GeneralPloidyINDEL|BOTH)
+ -pnrm,--p_nonref_model <p_nonref_model>                                                  				 	Non-reference probability calculation model to employ (EXACT)
+ -pcr_error,--pcr_error_rate <pcr_error_rate>                                            					        The PCR error rate to be used for computing fragment-based likelihoods
+ -nosl,--noSLOD                                                                           						    	        If provided, we will not calculate the SLOD
+ -nda,--annotateNDA                                                                      						        If provided, we will annotate records with the number of alternate alleles that were discovered (but not necessarily genotyped) at a given site
+ -mbq,--min_base_quality_score <min_base_quality_score>                                   			        Minimum base quality required to consider a base for calling
+ -deletions,--max_deletion_fraction <max_deletion_fraction>                               				Maximum fraction of reads with deletions spanning this locus for it to be callable [to disable, set to < 0 or > 1; default:0.05]
+ -minIndelCnt,--min_indel_count_for_genotyping <min_indel_count_for_genotyping>           		Minimum number of consensus indels required to trigger genotyping run
+ -minIndelFrac,--min_indel_fraction_per_sample <min_indel_fraction_per_sample>            			Minimum fraction of all reads at a locus that must contain an indel (of any allele) for that sample to contribute to the indel count for alleles
+ -indelHeterozygosity,--indel_heterozygosity <indel_heterozygosity>                       			        Heterozygosity for indel calling
+ -indelGCP,--indelGapContinuationPenalty <indelGapContinuationPenalty>                    			Indel gap continuation penalty, as Phred-scaled probability.  I.e., 30 => 10^-30/10
+ -indelGOP,--indelGapOpenPenalty <indelGapOpenPenalty>                                    			        Indel gap open penalty, as Phred-scaled probability. I.e., 30 => 10^-30/10
+ -ignoreLane,--ignoreLaneInfo                                                             				      	       		Ignore lane when building error model, error model is then per-site
+ -referenceCalls,--reference_sample_calls <reference_sample_calls>                        				VCF file with the truth callset for the reference sample
+ -refsample,--reference_sample_name <reference_sample_name>                               				Reference sample name.
+ -ploidy,--sample_ploidy <sample_ploidy>                                                  					  	Plody (number of chromosomes) per sample. For pooled data, set to (Number of samples in each pool * Sample Ploidy).
+ -hets,--heterozygosity <heterozygosity>                                                  						Heterozygosity value used to compute prior likelihoods for any locus
+ -gt_mode,--genotyping_mode <genotyping_mode>                                             				Specifies how to determine the alternate alleles to use for genotyping (DISCOVERY|GENOTYPE_GIVEN_ALLELES)
+ -out_mode,--output_mode <output_mode>                                                    					Specifies which type of calls we should output (EMIT_VARIANTS_ONLY|EMIT_ALL_CONFIDENT_SITES|EMIT_ALL_SITES)
+ -stand_call_conf,--standard_min_confidence_threshold_for_calling                         				The minimum phred-scaled <standard_min_confidence_threshold_for_calling> confidence threshold at which variants should be called
+ -stand_emit_conf,--standard_min_confidence_threshold_for_emitting                       				The minimum phred-scaled <standard_min_confidence_threshold_for_emitting> confidence threshold at which variants should be emitted (and filtered with LowQual if less than the calling threshold)
+ -alleles,--alleles <alleles>                                                            				    	    		The set of alleles at which to genotype when --genotyping_mode is GENOTYPE_GIVEN_ALLELES
+ -maxAltAlleles,--max_alternate_alleles <max_alternate_alleles>                           				Maximum number of alternate alleles to genotype
+ -D,--dbsnp <dbsnp>                                                                      					       	  	dbSNP file
+ -comp,--comp <comp>                                                                      							comparison VCF file 
+-o,--out <out>                                                                           								File to which variants should be written 
+-A,--annotation <annotation>                                                             							One or more specific annotations to apply to variant calls
+ -XA,--excludeAnnotation <excludeAnnotation>                                              					One or more specific annotations to exclude
+ -G,--group <group>                                                                       					       	    	One or more classes/groups of annotations to apply to variant calls
+

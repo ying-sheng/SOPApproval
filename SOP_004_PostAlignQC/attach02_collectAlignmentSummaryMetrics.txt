@@ -1,0 +1,9 @@
+MAX_INSERT_SIZE=Integer		Paired end reads above this insert size will be considered chimeric along with inter-chromosomal pairs. Default value: 100000. This option can be set to 'null' to clear the default value.
+ADAPTER_SEQUENCE=String		       List of adapter sequences to use when processing the alignment metrics This option may be specified 0 or more times. This option can be set to 'null' to clear the default list.
+METRIC_ACCUMULATION_LEVEL=MetricAccumulationLevel      		 The level(s) at which to accumulate metrics. Possible values: {ALL_READS, SAMPLE, LIBRARY, READ_GROUP} This option may be specified 0 or more times. This option can be set to 'null' to clear the default list.
+IS_BISULFITE_SEQUENCED=Boolean		Whether the SAM or BAM file consists of bisulfite sequenced reads. Default value: false. This option can be set to 'null' to clear the default value. Possible values: {true, false}
+INPUT=File				Input SAM or BAM file. Required.
+OUTPUT=File				File to write the output to. Required.
+REFERENCE_SEQUENCE=File	Reference sequence fasta Default value: null.
+ASSUME_SORTED=Boolean	If true (default), then the sort order in the header file will be ignored. Default value: true. This option can be set to 'null' to clear the default value. Possible values: {true, false}
+STOP_AFTER=Long		Stop after processing N reads, mainly for debugging. Default value: 0. This option can be set to 'null' to clear the default value.

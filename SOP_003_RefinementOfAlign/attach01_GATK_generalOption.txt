@@ -1,0 +1,40 @@
+-T,--analysis_type <analysis_type>								Type of analysis to run
+-args,--arg_file <arg_file>					     				     	Reads arguments from the specified file
+-I,--input_file <input_file>										SAM or BAM file(s)
+-rbs,--read_buffer_size <read_buffer_size>							Number of reads per SAM file to buffer in memory
+-et,--phone_home <phone_home>                                				What kind of GATK run report should we generate? STANDARD is the default, can be NO_ET so nothing is posted to the run repository. Please see t-is-phone-home-and-how-does-it-affect-me#latest for details. (NO_ET|STANDARD|STDOUT)
+ -K,--gatk_key <gatk_key>				     	       			     	     	GATK Key file. Required if running with -et NO_ET. Please see t-is-phone-home-and-how-does-it-affect-me#latest for details.
+ -rf,--read_filter <read_filter>				       					Specify filtration criteria to apply to each read individually
+ -L,--intervals <intervals>					       					One or more genomic intervals over which to operate. Can be explicitly specified on the command line or in a file (including a rod file)
+  -XL,--excludeIntervals <excludeIntervals>		       					One or more genomic intervals to exclude from processing. Can be explicitly specified on the command line or in a file (including a rod file)
+ -isr,--interval_set_rule <interval_set_rule>                  					Indicates the set merging approach the interval parser should use to combine the various -L or -XL inputs (UNION|INTERSECTION)
+ -im,--interval_merging <interval_merging>		       					Indicates the interval merging rule we should use for abutting intervals (ALL|OVERLAPPING_ONLY)
+ -ip,--interval_padding <interval_padding>                  					Indicates how many basepairs of padding to include around each of the intervals specified with the -L/--intervals argument
+ -R,--reference_sequence <reference_sequence>         					Reference sequence file
+ -ndrs,--nonDeterministicRandomSeed                        					Makes the GATK behave non deterministically, that is, the random numbers generated will be different in every run
+ -dt,--downsampling_type <downsampling_type>       					Type of reads downsampling to employ at a given locus.  Reads will be selected randomly to be removed from the pile based on the method described here (NONE|ALL_READS|BY_SAMPLE)
+ -dfrac,--downsample_to_fraction <downsample_to_fraction>  	 	        Fraction [0.0-1.0] of reads to downsample to
+ -dcov,--downsample_to_coverage <downsample_to_coverage>                  Coverage [integer] to downsample to at any given locus; note that downsampled reads are randomly selected from all possible reads at a locus
+ -baq,--baq <baq>                                                         	   	     	 	Type of BAQ calculation to apply in the engine (OFF|CALCULATE_AS_NECESSARY|RECALCULATE)
+ -baqGOP,--baqGapOpenPenalty <baqGapOpenPenalty>                               BAQ gap open penalty (Phred Scaled).  Default value is 40.  30 is perhaps better for whole genome call sets
+ -PF,--performanceLog <performanceLog>                   		       	        If provided, a GATK runtime performance log will be written to this file
+ -OQ,--useOriginalQualities                                             		   	        If set, use the original base quality scores from the OQ tag when present instead of the standard scores
+ -BQSR,--BQSR <BQSR>                                                    				The input covariates table file which enables on-the-fly base quality score recalibration
+ -DIQ,--disable_indel_quals                                             				If true, disables printing of base insertion and base deletion tags (with -BQSR)
+ -EOQ,--emit_original_quals                                             				If true, enables printing of the OQ tag with the original base qualities (with -BQSR)
+ -preserveQ,--preserve_qscores_less_than <preserve_qscores_less_than>   Bases with quality scores less than this threshold won't be recalibrated (with -BQSR)
+ -DBQ,--defaultBaseQualities <defaultBaseQualities>                                   If reads are missing some or all base quality scores, this value will be used for all base quality scores
+ -S,--validation_strictness <validation_strictness>                     	      	       How strict should we be with validation (STRICT|LENIENT|SILENT)
+ -rpr,--remove_program_records                                          		       	       Should we override the Walker's default and remove program records from the SAM header
+ -kpr,--keep_program_records                                            			       Should we override the Walker's default and keep program records from the SAM header
+ -U,--unsafe <unsafe>                                                   			       If set, enables unsafe operations: nothing will be checked at runtime.  For expert users only who know what they are doing.  We do not support usage of this argument. (ALLOW_UNINDEXED_BAM|ALLOW_UNSET_BAM_SORT_ORDER|NO_READ_ORDER_VERIFICATION| ALLOW_SEQ_DICT_INCOMPATIBILITY|LENIENT_VCF_PROCESSING|ALL)
+ -nt,--num_threads <num_threads>                                        		       How many threads should be allocated to running this analysis.
+ -bfh,--num_bam_file_handles <num_bam_file_handles>                             The total number of BAM file handles to keep open simultaneously
+ -rgbl,--read_group_black_list <read_group_black_list>                  	       Filters out read groups matching <TAG>:<STRING> or a .txt file containing the filter strings one per line.
+ -ped,--pedigree <pedigree>                                             	       	       	       Pedigree files for samples
+ -pedString,--pedigreeString <pedigreeString>                           		       Pedigree string for samples
+ -pedValidationType,--pedigreeValidationType <pedigreeValidationType>  How strict should we be in validating the pedigree information? (STRICT|SILENT)
+ -l,--logging_level <logging_level>                                        	  	       Set the minimum level of logging, i.e. setting INFO get's you INFO up to FATAL, setting ERROR gets you ERROR and FATAL level logging.
+ -log,--log_to_file <log_to_file>                                       		       	       Set the logging location
+ -h,--help                                                              			       	       	       Generate this help message
+

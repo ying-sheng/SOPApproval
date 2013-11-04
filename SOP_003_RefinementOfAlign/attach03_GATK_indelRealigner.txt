@@ -1,0 +1,19 @@
+ -targetIntervals,--targetIntervals <targetIntervals>						intervals file output from RealignerTargetCreator
+ -known,--knownAlleles <knownAlleles>                                 		    		Input VCF file(s) with known indels
+ -LOD,--LODThresholdForCleaning <LODThresholdForCleaning>            		LOD threshold above which the cleaner will clean
+ -o,--out <out>                                                       	 	   	       	    	      	Output bam
+ -compress,--bam_compression <bam_compression>                        	   		Compression level to use for writing BAM files
+ --disable_bam_indexing                                               	   	       	     	    	     	Turn off on-the-fly creation of indices for output BAM files.
+ --generate_md5                                                       				   		Enable on-the-fly creation of md5s for output BAM files.
+ -simplifyBAM,--simplifyBAM                                           		           		If provided, output BAM files will be simplified to include just key reads for downstream variation discovery analyses (removing duplicates, PF-, non-primary reads), as well stripping all extended tags from the kept reads except the read group identifier
+ -model,--consensusDeterminationModel <consensusDeterminationModel>   	Determines how to compute the possible alternate consenses (KNOWNS_ONLY|USE_READS|USE_SW)
+ -entropy,--entropyThreshold <entropyThreshold>                       		        percentage of mismatches at a locus to be considered having high entropy
+ -maxInMemory,--maxReadsInMemory <maxReadsInMemory>                   		max reads allowed to be kept in memory at a time by the SAMFileWriter
+ -maxIsize,--maxIsizeForMovement <maxIsizeForMovement>                		maximum insert size of read pairs that we attempt to realign
+ -maxPosMove,--maxPositionalMoveAllowed <maxPositionalMoveAllowed>        wmaximum positional move in basepairs that a read can be adjusted during realignment
+ -maxConsensuses,--maxConsensuses <maxConsensuses>                    	  	max alternate consensuses to try (necessary to improve performance in deep coverage)
+ -greedy,--maxReadsForConsensuses <maxReadsForConsensuses>            	max reads used for finding the alternate consensuses (necessary to improve performance in deep coverage)
+ -maxReads,--maxReadsForRealignment <maxReadsForRealignment>          	max reads allowed at an interval for realignment
+ -noTags,--noOriginalAlignmentTags                                    	    	  	     	Don't output the original cigar or alignment start tags for each realigned read in the output bam
+ -nWayOut,--nWayOut <nWayOut>                                         				Generate one output file for each input (-I) bam file
+
